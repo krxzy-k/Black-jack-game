@@ -1,14 +1,21 @@
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
-    background-image: url("images/table.png");
+    background-image: url("images/Poker\ and\ casino\ playing\ card\ black\ Background.jpeg");
     background-size: cover;
     font-weight: bold;
     color: white;
     text-align: center;
 }
 
+.container {
+    display: block;
+    align-content: center;
+    height: 50vh;
+    font-size: 50px;
+}
+
 h1 {
-    color: goldenrod;
+    color: rgb(158, 42, 42);
 }
 
 #message-el {
@@ -16,13 +23,15 @@ h1 {
 }
 
 button {
-    color: #016f32;
-    width: 150px;
-    background: goldenrod;
+    color: white;
+    width: 200px;
+    height: 50px;
+    background: rgb(158, 42, 42);
     padding-top: 5px;
     padding-bottom: 5px;
     font-weight: bold;
     border: none;
     border-radius: 2px;
     margin: 5px;
+    font-size: 25px;
 }

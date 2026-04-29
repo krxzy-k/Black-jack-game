@@ -1,7 +1,7 @@
 //list of all the variables in the program
 
-let firstCard = 10
-let secondCard = 2
+let firstCard = getRandomCard()
+let secondCard = getRandomCard()
 let cards = [firstCard, secondCard]
 let sum = firstCard + secondCard
 let isAlive = true
@@ -11,13 +11,21 @@ let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
 
+function getRandomCard() {
+    return 5
+}
+
 function startGame() {
     renderGame()
 }
 
 function renderGame() {
+    cardsEl.textContent = "Cards: "
+    for (let i = 0; i < cards.length; i++ ) {
+        cardsEl.textContent += cards[i] + " "
+    }
     sumEl.textContent = "Sum: " + sum
-    cardsEl.textContent = "Cards: " + cards[0] + " " + cards[1]
+
     if (sum < 21) {
         message = "Do you want to draw a new card?"
     } else if (sum === 21) {
@@ -33,7 +41,7 @@ function renderGame() {
 }
 
 function newCard() {
-    let thirdCard = 5
+    let thirdCard = getRandomCard()
     sum += thirdCard
     cards.push(thirdCard)
     renderGame()
